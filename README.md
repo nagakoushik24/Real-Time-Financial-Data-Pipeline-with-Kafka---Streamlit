@@ -116,28 +116,23 @@ Below are screenshots of the running Streamlit dashboard showing live trades, ch
 
 ### Overview
 ![Dashboard - Live Trades and Char[Uploading Desktop.lnk…]()
-ts](docs/screenshots/dashboard_overview.png)
+ts](assets/d1.png)
 *Figure 1 — Main dashboard: live trade table (left), controls & stats (right).*
 
 ### Price Chart (AAPL)
-![AAPL Price Chart](docs/screenshots/price_aapl.png)
-*Figure 2 — AAPL price line chart with 1-minute OHLC candlesticks.*
-![GOOGL Price Chart](docs/screenshots/price_aapl.png)
-*Figure 2 — GOOGL price line chart with 1-minute OHLC candlesticks.*
-![MSFT Price Chart](docs/screenshots/price_aapl.png)
-*Figure 2 — MSFT price line chart with 1-minute OHLC candlesticks.*
+![AAPL Price Chart](assets/d_a.png)
+![GOOGL Price Chart](assets/d_g.png)
+![MSFT Price Chart](assets/d_m.png)
 
 ### CLI
-![Kafka Producer CLI](docs/screenshots/ohlc_vwap.png)
-![Kafka Customer CLI(similar in APP)](docs/screenshots/ohlc_vwap.png)
+![Kafka Producer CLI](assets/cli_c.png)
+![Kafka Customer CLI(similar in APP)](assets/cli_d.png)
+![CLI interface](assets/clii.png)
 
 ### OHLC Candles & VWAP
-![OHLC and VWAP](docs/screenshots/ohlc_vwap.png)
-*Figure 3 — 1-minute OHLC candlestick chart and VWAP overlay for selected symbol.*
-![OHLC and VWAP](docs/screenshots/ohlc_vwap.png)
-*Figure 3 — 1-minute OHLC candlestick chart and VWAP overlay for selected symbol.*
-![OHLC and VWAP](docs/screenshots/ohlc_vwap.png)
-*Figure 3 — 1-minute OHLC candlestick chart and VWAP overlay for selected symbol.*
+![OHLC and VWAP](assets/dc_g.png)
+![OHLC and VWAP](assets/dc_2.png)
+![OHLC and VWAP](assets/dc_3.png)
 
 ---
 

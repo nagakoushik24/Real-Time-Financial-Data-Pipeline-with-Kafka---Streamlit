@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: task-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: assignment
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - task-network
+
+  task-api:
+    build: .
+    container_name: task-api
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/assignment
+      JAVA_OPTS: "-Xmx256m -Xms128m -XX:+UseSerialGC"
+    depends_on:
+      - mongodb
+    networks:
+      - task-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/tasks"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  task-ui:
+    build: ./kaiburr-task-ui
+    container_name: task-ui
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    environment:
+      REACT_APP_API_URL: http://localhost:8080
+    depends_on:
+      - task-api
+    networks:
+      - task-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  task-network:
+    driver: bridge

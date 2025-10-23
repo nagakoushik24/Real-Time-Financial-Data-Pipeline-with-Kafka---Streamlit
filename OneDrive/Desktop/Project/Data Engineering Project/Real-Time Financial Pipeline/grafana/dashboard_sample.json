@@ -1,0 +1,13 @@
+{
+    "dashboard": {
+      "id": null,
+      "title": "FinStream Sample",
+      "panels": [
+        {
+          "type": "graph",
+          "title": "VWAP (sample)",
+          "targets": []
+        }
+      ]
+    }
+  }

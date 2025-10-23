@@ -1,0 +1,19 @@
+{
+    "name": "jdbc-sink-postgres",
+    "config": {
+      "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+      "tasks.max": "1",
+      "topics": "vwap_1m",
+      "connection.url": "jdbc:postgresql://postgres:5432/finstream",
+      "connection.user": "postgres",
+      "connection.password": "postgres",
+      "auto.create": "true",
+      "auto.evolve": "true",
+      "insert.mode": "upsert",
+      "pk.mode": "record_value",
+      "pk.fields": "symbol,window_start",
+      "transforms": "ExtractValue",
+      "transforms.ExtractValue.type": "org.apache.kafka.connect.transforms.ExtractField$Value",
+      "transforms.ExtractValue.field": "payload"
+    }
+  }

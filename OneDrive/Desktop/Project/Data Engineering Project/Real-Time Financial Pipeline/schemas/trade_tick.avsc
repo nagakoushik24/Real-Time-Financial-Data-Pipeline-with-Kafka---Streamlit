@@ -1,0 +1,12 @@
+{
+  "namespace": "com.example.fin",
+  "type": "record",
+  "name": "TradeTick",
+  "fields": [
+    {"name":"s","type":"string","doc":"symbol"},
+    {"name":"p","type":"double","doc":"price"},
+    {"name":"v","type":"long","doc":"volume/size"},
+    {"name":"t","type":"long","doc":"exchange timestamp (ms)"},
+    {"name":"ingest_ts","type":"long","doc":"ingestion timestamp (ms)"}
+  ]
+}

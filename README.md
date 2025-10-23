@@ -134,14 +134,6 @@ conda activate kafka-finance  # or your preferred environment
 python producer/producer_finnhub.py
 ```
 
-**Expected Output:**
-```
-2025-01-23 11:45:30 INFO producer WebSocket opened; subscribing to symbols: ['AAPL', 'MSFT', 'GOOGL']
-2025-01-23 11:45:30 INFO producer Subscribed to AAPL
-2025-01-23 11:45:30 INFO producer Subscribed to MSFT
-2025-01-23 11:45:30 INFO producer Subscribed to GOOGL
-```
-
 ### 2. Start the Streamlit Dashboard
 
 ```bash
@@ -202,26 +194,19 @@ docker exec -it real-timefinancialpipeline-kafka-1 \
 | Grafana | 3000 | Monitoring dashboard |
 | PostgreSQL | 5432 | Database (optional) |
 
-## 🐛 Troubleshooting
 
-### Common Issues
-
-1. **WebSocket Connection Failed**
    ```bash
    # Check if Finnhub API key is valid
    curl "https://finnhub.io/api/v1/quote?symbol=AAPL&token=YOUR_API_KEY"
    ```
 
-2. **Kafka Connection Issues**
    ```bash
-   # Check if Kafka is running
    docker-compose ps kafka
    
    # Check Kafka logs
    docker-compose logs kafka
    ```
 
-3. **No Data in Dashboard**
    ```bash
    # Verify producer is sending data
    docker exec -it real-timefinancialpipeline-kafka-1 \
@@ -283,4 +268,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Screenshoots
 
-[Web_page](assets/dl_1.png)
+![Web_page](assets/d1.png)
+![Web_page](assets/d_m.png)
+![Web_page](assets/dc_g.png)
+![Web_page](assets/d_m.png)
+![Web_page](assets/dc_2.png)
+![Web_page](assets/dc_3.png)
+![Web_page](assets/d_a.png)
+![Web_page](assets/d_g.png)
+![CLI](assets/cli_c.png)
+![CLI](assets/cli_d.png)
+![CLI](assets/clii.png)
